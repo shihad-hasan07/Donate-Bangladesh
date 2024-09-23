@@ -17,8 +17,6 @@ document.getElementById('donation-btn')
         historyBtn.classList.remove('btn', 'btn-warning')
         allDonation.classList.remove('hidden');
         allHistory.classList.add('hidden');
-
-
     })
 // donation btn end
 
@@ -32,33 +30,32 @@ document.getElementById('history-btn')
         historyBtn.classList.add('btn', 'btn-warning');
         allDonation.classList.add('hidden')
         allHistory.classList.remove('hidden')
-
-
     })
 // history btn end
-
 
 // donate now btn starts
 document.getElementById('1confirm-donate')
     .addEventListener('click', function () {
+
         let totalCollectedBalance = parseFloat(document.getElementById('1card-balance-collected').innerText);
         let donatedBalance = parseFloat(document.getElementById('1card-donate').value);
-
         if (donatedBalance >= 0) {
             if (donatedBalance <= totalBalance) {
                 totalBalance = totalBalance - donatedBalance;
                 document.getElementById('total-balance').innerText = totalBalance;
-
                 totalCollectedBalance = totalCollectedBalance + donatedBalance;
-                document.getElementById('1card-balance-collected').innerText=totalCollectedBalance;
+                document.getElementById('1card-balance-collected').innerText = totalCollectedBalance;
+                donationModal.classList.remove('hidden');
             }
             else {
                 alert('insufficent balance');
             }
         }
         else {
-            alert('Hey there! Ready to refresh?'); window.location.reload();
+            alert('Invalid input'); window.location.reload();
         }
-
     })
-// donate now btn end
+// modal click 
+confirmBtn.addEventListener('click', function(){
+    donationModal.classList.add('hidden');
+});
