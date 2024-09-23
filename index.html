@@ -36,7 +36,7 @@
 <body class="font-font_lexend">
 
 <!-- header start-->
-    <nav>
+    <nav class="sticky top-0 backdrop-blur-[10px]">
         <!-- navbar -->
         <div class="bg-[#F9F7F3]">
             <div class="container font-semibold text-xl px-7 2xl:px-0 mx-auto mb-10 font-font_lexend flex justify-between items-center h-24 ">
@@ -57,16 +57,16 @@
             </div>
         </div>
 
-        <!-- donation and history -->
+        <!-- donation and history button-->
         <div class="mx-auto flex justify-center items-center gap-4 mb-6">
-            <p class="btn btn-warning px-8 font-semibold text-xl">Donation</p>
-            <p class="border rounded-xl px-8 py-[10px] font-semibold text-xl text-smallText">History</p>
+            <p id="donation-btn" class="btn btn-warning px-8 font-semibold text-xl">Donation</p>
+            <p id="history-btn" class="border rounded-xl px-8 py-[10px] font-semibold text-xl text-smallText">History</p>
         </div>
     </nav>
 <!-- header end -->
 
-<!-- main body section start -->
-        <section class="container mx-auto">
+<!-- donation section start -->
+        <section id="donation" class="container mx-auto">
 
             <!-- 1st card -->
             <div class="flex flex-col lg:flex-row justify-between p-8 gap-8 border rounded-2xl">
@@ -127,12 +127,35 @@
                     <div class="bg-[#B4F461] py-4 rounded-lg text-center">Donate Now</div>
                 </div>
             </div>
- 
- 
-        </section>
-<!-- main body section end -->
-        <footer class="mt-20 bg-[#F9F7F3] h-36">   
 
+        </section>
+<!-- donation section end -->
+
+
+<!-- history section starts -->
+    <section id="history" class="hidden">
+
+        <!-- history 1 -->
+        <div class="container mx-auto border mt-8 p-8 rounded-2xl">
+            <h2 class="font-bold text-xl">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+            <p class="text-smallText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+        </div>
+
+        <!-- history 2 -->
+        <div class="container mx-auto border mt-8 p-8 rounded-2xl">
+            <h2 class="font-bold text-xl">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+            <p class="text-smallText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+        </div>
+
+        <!-- history 3 -->
+        <div class="container mx-auto border mt-8 p-8 rounded-2xl">
+            <h2 class="font-bold text-xl">96500 Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+            <p class="text-smallText">Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)</p>
+        </div>
+
+    </section>
+<!-- history section end -->
+        <footer class="mt-20 bg-[#F9F7F3] h-36">   
 
 
 
