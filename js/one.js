@@ -2,18 +2,18 @@ const donationBtn = document.getElementById('donation-btn');
 const historyBtn = document.getElementById('history-btn');
 const donationClassList = document.getElementById('donation-btn').classList.value;
 const historyClassList = document.getElementById('history-btn').classList.value;
-const allDonation=document.getElementById('donation');
-const allHistory=document.getElementById('history');
+const allDonation = document.getElementById('donation');
+const allHistory = document.getElementById('history');
 
 // total balance
-const totalBalance=document.getElementById('total-balance');
+let totalBalance = parseFloat(document.getElementById('total-balance').innerText);
 
 // click donation btn starts
 document.getElementById('donation-btn')
-    .addEventListener('click', function(){
+    .addEventListener('click', function () {
 
         // add/remove style in donation btn
-        donationBtn.classList.add('btn', 'btn-warning', )
+        donationBtn.classList.add('btn', 'btn-warning',)
         historyBtn.classList.remove('btn', 'btn-warning')
         allDonation.classList.remove('hidden');
         allHistory.classList.add('hidden');
@@ -25,10 +25,10 @@ document.getElementById('donation-btn')
 // click history btn starts
 document.getElementById('history-btn')
     .addEventListener('click', function () {
-        
+
         // add/remove style in histoy btn
         donationBtn.classList.remove('btn', 'btn-warning');
-        donationBtn.classList.add('border', 'rounded-xl','py-[10px]');
+        donationBtn.classList.add('border', 'rounded-xl', 'py-[10px]');
         historyBtn.classList.add('btn', 'btn-warning');
         allDonation.classList.add('hidden')
         allHistory.classList.remove('hidden')
@@ -40,13 +40,25 @@ document.getElementById('history-btn')
 
 // donate now btn starts
 document.getElementById('1confirm-donate')
-    .addEventListener('click',function(){
-        const totalCollectedBalance=parseFloat(document.getElementById('1card-balance-collected').innerText);
-        const donatedBalance=parseFloat(document.getElementById('1card-donate').value);
+    .addEventListener('click', function () {
+        let totalCollectedBalance = parseFloat(document.getElementById('1card-balance-collected').innerText);
+        let donatedBalance = parseFloat(document.getElementById('1card-donate').value);
 
-        
-        console.log(donatedBalance);
-        console.log(typeof donatedBalance);
+        if (donatedBalance >= 0) {
+            if (donatedBalance <= totalBalance) {
+                totalBalance = totalBalance - donatedBalance;
+                document.getElementById('total-balance').innerText = totalBalance;
+
+                totalCollectedBalance = totalCollectedBalance + donatedBalance;
+                document.getElementById('1card-balance-collected').innerText=totalCollectedBalance;
+            }
+            else {
+                alert('insufficent balance');
+            }
+        }
+        else {
+            alert('Hey there! Ready to refresh?'); window.location.reload();
+        }
 
     })
 // donate now btn end
