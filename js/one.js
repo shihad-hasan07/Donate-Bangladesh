@@ -8,6 +8,14 @@ const allHistory = document.getElementById('history');
 // total balance
 let totalBalance = parseFloat(document.getElementById('total-balance').innerText);
 
+// blog page starts
+document.getElementById('go-blog-page')
+    .addEventListener('click',function(){
+        window. location .href = "./blog.html"    
+})
+// blog page end
+
+
 // click donation btn starts
 document.getElementById('donation-btn')
     .addEventListener('click', function () {
@@ -42,7 +50,7 @@ document.getElementById('1confirm-donate')
 
         let totalCollectedBalance = parseFloat(document.getElementById('1card-balance-collected').innerText);
         let donatedBalance = parseFloat(document.getElementById('1card-donate').value);
-        if (donatedBalance >= 0) {
+        if (donatedBalance >= 0 && donatedBalance !== 'string') {
             if (donatedBalance <= totalBalance) {
                 totalBalance = totalBalance - donatedBalance;
                 document.getElementById('total-balance').innerText = totalBalance;
@@ -86,7 +94,7 @@ document.getElementById('2confirm-donate')
         let totalCollectedBalance = parseFloat(document.getElementById('2card-balance-collected').innerText);
         let donatedBalance = parseFloat(document.getElementById('2card-donate').value);
         if (donatedBalance >= 0) {
-            if (donatedBalance <= totalBalance) {
+            if (donatedBalance <= totalBalance && donatedBalance !== 'string') {
                 totalBalance = totalBalance - donatedBalance;
                 document.getElementById('total-balance').innerText = totalBalance;
                 totalCollectedBalance = totalCollectedBalance + donatedBalance;
@@ -128,7 +136,7 @@ document.getElementById('3confirm-donate')
 
         let totalCollectedBalance = parseFloat(document.getElementById('3card-balance-collected').innerText);
         let donatedBalance = parseFloat(document.getElementById('3card-donate').value);
-        if (donatedBalance >= 0) {
+        if (donatedBalance >= 0 && donatedBalance !== 'string') {
             if (donatedBalance <= totalBalance) {
                 totalBalance = totalBalance - donatedBalance;
                 document.getElementById('total-balance').innerText = totalBalance;

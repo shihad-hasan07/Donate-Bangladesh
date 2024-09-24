@@ -16,10 +16,9 @@
     <nav class="sticky top-0 backdrop-blur-[10px]">
         <!-- navbar -->
         <div class="bg-[#F9F7F3]">
-            <div
-                class="container font-semibold text-xl px-7 2xl:px-0 mx-auto mb-10 font-font_lexend flex justify-between items-center h-24 ">
+            <div class="container font-semibold text-xl px-7 2xl:px-0 mx-auto mb-10 font-font_lexend flex justify-between items-center h-24 ">
                 <!--start -->
-                <div class="btn btn-warning px-8 font-semibold text-xl"><button>Blog</button></div>
+                <div id="go-home-page" class="btn btn-warning px-8 font-semibold text-xl"><button>Home</button></div>
 
                 <!-- center -->
                 <div class="flex items-center">
@@ -35,34 +34,29 @@
             </div>
         </div>
 
-        <!-- donation and history button-->
-        <div class="mx-auto flex justify-center items-center gap-4 mb-6 pb-8">
-            <p id="donation-btn" class="btn btn-warning px-8 font-semibold text-xl">Donation</p>
-            <p id="history-btn" class="border rounded-xl px-8 py-[10px] font-semibold text-xl text-smallText">History
-            </p>
-        </div>
     </nav>
     <!-- header end -->
+
 
     <!-- blog section -->
     <section class="container mx-auto">
         <p>Important FAQ !!</p>
         <div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border">
                 <input type="radio" name="my-accordion-2" checked="checked" />
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">
                     <p>hello</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">
                     <p>hello</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow bg-base-200 border">
                 <input type="radio" name="my-accordion-2" />
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">
@@ -71,6 +65,12 @@
             </div>
         </div>
     </section>
+
+    <script>
+        document.getElementById('go-home-page').addEventListener('click',function(){
+            window. location .href = "./index.html"
+        })
+    </script>
 </body>
 
 </html>
