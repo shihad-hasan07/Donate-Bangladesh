@@ -30,10 +30,13 @@ document.getElementById('history-btn')
         historyBtn.classList.add('btn', 'btn-warning');
         allDonation.classList.add('hidden')
         allHistory.classList.remove('hidden')
+        
+
     })
 // history btn end
 
-// donate now btn starts
+
+// card 1 starts
 document.getElementById('1confirm-donate')
     .addEventListener('click', function () {
 
@@ -46,16 +49,129 @@ document.getElementById('1confirm-donate')
                 totalCollectedBalance = totalCollectedBalance + donatedBalance;
                 document.getElementById('1card-balance-collected').innerText = totalCollectedBalance;
                 donationModal.classList.remove('hidden');
+
+                // add history
+                const historyItem = document.createElement('div');
+                historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
+                historyItem.innerHTML = `
+                    <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+                    <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+                `
+                // add all of the history into the history section
+                allHistory.insertBefore(historyItem, allHistory.firstChild);
             }
             else {
                 alert('insufficent balance');
             }
         }
         else {
-            alert('Invalid input'); window.location.reload();
+            alert('Invalid input');
         }
     })
 // modal click 
-confirmBtn.addEventListener('click', function(){
+confirmBtn.addEventListener('click', function () {
+    let sum = document.getElementById('1card-donate').value;
+
+    // here the empty string will be reset the user input value
+    document.getElementById('1card-donate').value = '';
     donationModal.classList.add('hidden');
 });
+// card 1 ends
+
+
+// card 2 starts
+document.getElementById('2confirm-donate')
+    .addEventListener('click', function () {
+
+        let totalCollectedBalance = parseFloat(document.getElementById('2card-balance-collected').innerText);
+        let donatedBalance = parseFloat(document.getElementById('2card-donate').value);
+        if (donatedBalance >= 0) {
+            if (donatedBalance <= totalBalance) {
+                totalBalance = totalBalance - donatedBalance;
+                document.getElementById('total-balance').innerText = totalBalance;
+                totalCollectedBalance = totalCollectedBalance + donatedBalance;
+                document.getElementById('2card-balance-collected').innerText = totalCollectedBalance;
+                donationModal.classList.remove('hidden');
+
+                // add history
+                const historyItem = document.createElement('div');
+                historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
+                historyItem.innerHTML = `
+                    <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
+                    <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+                `
+                // add all of the history into the history section
+                allHistory.insertBefore(historyItem, allHistory.firstChild);
+            }
+            else {
+                alert('insufficent balance');
+            }
+        }
+        else {
+            alert('Invalid input');
+        }
+    })
+// modal click 
+confirmBtn.addEventListener('click', function () {
+    let sum = document.getElementById('2card-donate').value;
+
+    // here the empty string will be reset the user input value
+    document.getElementById('2card-donate').value = '';
+    donationModal.classList.add('hidden');
+});
+// card 2 ends
+
+
+// card 3 starts
+document.getElementById('3confirm-donate')
+    .addEventListener('click', function () {
+
+        let totalCollectedBalance = parseFloat(document.getElementById('3card-balance-collected').innerText);
+        let donatedBalance = parseFloat(document.getElementById('3card-donate').value);
+        if (donatedBalance >= 0) {
+            if (donatedBalance <= totalBalance) {
+                totalBalance = totalBalance - donatedBalance;
+                document.getElementById('total-balance').innerText = totalBalance;
+                totalCollectedBalance = totalCollectedBalance + donatedBalance;
+                document.getElementById('3card-balance-collected').innerText = totalCollectedBalance;
+                donationModal.classList.remove('hidden');
+
+                // add history
+                const historyItem = document.createElement('div');
+                historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
+                historyItem.innerHTML = `
+                    <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for Aid for Injured in the Quota Movement</h2>
+                    <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+                `
+                // add all of the history into the history section
+                allHistory.insertBefore(historyItem, allHistory.firstChild);
+            }
+            else {
+                alert('insufficent balance');
+            }
+        }
+        else {
+            alert('Invalid input');
+        }
+    })
+// modal click 
+confirmBtn.addEventListener('click', function () {
+    let sum = document.getElementById('3card-donate').value;
+
+    // here the empty string will be reset the user input value
+    document.getElementById('3card-donate').value = '';
+    donationModal.classList.add('hidden');
+});
+// card 3 ends.
+
+
+
+// add history
+const historyItem = document.createElement('div');
+historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
+historyItem.innerHTML = `
+        <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+    `
+// add all of the history into the history section
+allHistory.insertBefore(historyItem, allHistory.firstChild);
