@@ -4,6 +4,7 @@ const donationClassList = document.getElementById('donation-btn').classList.valu
 const historyClassList = document.getElementById('history-btn').classList.value;
 const allDonation = document.getElementById('donation');
 const allHistory = document.getElementById('history');
+const historyNotAdded=document.getElementById('history-not-added');
 
 // total balance
 let totalBalance = parseFloat(document.getElementById('total-balance').innerText);
@@ -66,6 +67,7 @@ document.getElementById('1confirm-donate')
                     <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
                     <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
                 `
+                historyNotAdded.classList.add('hidden');
                 // add all of the history into the history section
                 allHistory.insertBefore(historyItem, allHistory.firstChild);
             }
@@ -106,6 +108,7 @@ document.getElementById('2confirm-donate')
                     <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for Flood Relief in Feni,Bangladesh</h2>
                     <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
                 `
+                historyNotAdded.classList.add('hidden');
                 // add all of the history into the history section
                 allHistory.insertBefore(historyItem, allHistory.firstChild);
             }
@@ -143,9 +146,10 @@ document.getElementById('3confirm-donate')
                 const historyItem = document.createElement('div');
                 historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
                 historyItem.innerHTML = `
-                    <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for Aid for Injured in the Quota Movement</h2>
+                    <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for Aid for Injured in the Quota Movement </h2>
                     <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
                 `
+                historyNotAdded.classList.add('hidden');
                 // add all of the history into the history section
                 allHistory.insertBefore(historyItem, allHistory.firstChild);
             }
@@ -166,15 +170,15 @@ confirmBtn.addEventListener('click', function () {
 
 
 
-// add history
-const historyItem = document.createElement('div');
-historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
-historyItem.innerHTML = `
-        <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
-        <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
-    `
-// add all of the history into the history section
-allHistory.insertBefore(historyItem, allHistory.firstChild);
+// // add history
+// const historyItem = document.createElement('div');
+// historyItem.classList = "container mx-auto border sm:mx-auto mt-8 p-8 rounded-2xl";
+// historyItem.innerHTML = `
+//         <h2 class="font-bold text-xl mb-2">${donatedBalance} Taka is Donated for famine-2024 at Feni, Bangladesh</h2>
+//         <p class="text-smallText">Date : ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}(Bangladesh Standard Time)</p>
+//     `
+// // add all of the history into the history section
+// allHistory.insertBefore(historyItem, allHistory.firstChild);
 
 
 
