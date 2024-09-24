@@ -59,31 +59,57 @@
 
     <!-- blog section -->
     <section class="container mx-auto">
-        <p>Important FAQ !!</p>
+        <p class="font-extrabold text-3xl mb-6">Important FAQ !!</p>
         <div>
-            <div class="collapse collapse-arrow bg-base-200 border">
+
+             <!-- faq 1 -->
+            <div class="collapse collapse-arrow bg-base-200 border mb-5">
                 <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium">What is the DOM?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents.</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200 border">
+
+            <!-- faq 2 -->
+            <div class="collapse collapse-arrow bg-base-200 border mb-5">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium">How does the DOM differ from the actual web page?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.</p>
                 </div>
             </div>
+
+            <!-- faq 3 -->
+            <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate the DOM using JavaScript?</div>
+                <div class="collapse-content">
+                    <p>JavaScript manipulates the DOM by selecting elements and changing their properties or contents.</p>
+                </div>
+            </div>
+
+            <!-- faq 4 -->
+            <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is the difference between the actual web page and the DOM?</div>
+                <div class="collapse-content">
+                    <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.</p>
+                </div>
+            </div>
+
+            <!-- faq 5 -->
             <div class="collapse collapse-arrow bg-base-200 border">
                 <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
+                <div class="collapse-title text-xl font-medium">Is DOM manipulation bad?</div>
                 <div class="collapse-content">
-                    <p>hello</p>
+                    <p>When manipulating DOM elements, interactions often involve classes and IDs. The risk arises that ServiceNow may alter these names in a future update, potentially causing the script to no longer function as anticipated.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="mt-20  bg-[#F9F7F3] h-36"></footer>
 
     <script>
         document.getElementById('go-home-page').addEventListener('click',function(){
