@@ -5,12 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        smallText: 'rgba(17, 17, 17, 0.70)',
+                    },
+                    fontFamily: {
+                        font_lexend: 'Lexend',
+                    },
+                    
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="font-font_lexend">
 
     <!-- header -->
     <nav class="sticky top-0 backdrop-blur-[10px]">
@@ -29,7 +48,7 @@
                 <!-- end -->
                 <div class="flex items-center">
                     <img class="w-7 h-7" src="./assets/coin.png" alt="">
-                    <p id="total-balance" class="pl-3">50000</p>
+                    <p class="pl-3"><span id="total-balance">50000</span> BDT</p>
                 </div>
             </div>
         </div>
