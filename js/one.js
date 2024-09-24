@@ -8,10 +8,11 @@ const allHistory = document.getElementById('history');
 // total balance
 let totalBalance = parseFloat(document.getElementById('total-balance').innerText);
 
+
 // blog page starts
 document.getElementById('go-blog-page')
-    .addEventListener('click',function(){
-        window. location .href = "./blog.html"    
+    .addEventListener('click',function(event){
+        window. location .href = "./blog.html"
 })
 // blog page end
 
@@ -79,9 +80,6 @@ document.getElementById('1confirm-donate')
 // modal click 
 confirmBtn.addEventListener('click', function () {
     let sum = document.getElementById('1card-donate').value;
-
-    // here the empty string will be reset the user input value
-    document.getElementById('1card-donate').value = '';
     donationModal.classList.add('hidden');
 });
 // card 1 ends
@@ -122,9 +120,6 @@ document.getElementById('2confirm-donate')
 // modal click 
 confirmBtn.addEventListener('click', function () {
     let sum = document.getElementById('2card-donate').value;
-
-    // here the empty string will be reset the user input value
-    document.getElementById('2card-donate').value = '';
     donationModal.classList.add('hidden');
 });
 // card 2 ends
@@ -165,9 +160,6 @@ document.getElementById('3confirm-donate')
 // modal click 
 confirmBtn.addEventListener('click', function () {
     let sum = document.getElementById('3card-donate').value;
-
-    // here the empty string will be reset the user input value
-    document.getElementById('3card-donate').value = '';
     donationModal.classList.add('hidden');
 });
 // card 3 ends.
@@ -183,3 +175,6 @@ historyItem.innerHTML = `
     `
 // add all of the history into the history section
 allHistory.insertBefore(historyItem, allHistory.firstChild);
+
+
+

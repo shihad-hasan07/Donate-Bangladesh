@@ -9,8 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
+    <script src="https://kit.fontawesome.com/eca0d48a5c.js" crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -22,7 +25,7 @@
                     fontFamily: {
                         font_lexend: 'Lexend',
                     },
-                    
+
                 }
             }
         }
@@ -32,10 +35,11 @@
 <body class="font-font_lexend">
 
     <!-- header -->
-    <nav class="sticky top-0 backdrop-blur-[10px]">
+    <nav class="sticky z-10 top-0 backdrop-blur-[10px]">
         <!-- navbar -->
         <div class="bg-[#F9F7F3]">
-            <div class="container font-semibold text-xl px-7 2xl:px-0 mx-auto mb-10 font-font_lexend flex justify-between items-center h-24 ">
+            <div
+                class="container font-semibold text-xl px-7 2xl:px-0 mx-auto mb-10 font-font_lexend flex justify-between items-center h-24 ">
                 <!--start -->
                 <div id="go-home-page" class="btn btn-warning px-8 font-semibold text-xl"><button>Home</button></div>
 
@@ -58,52 +62,62 @@
 
 
     <!-- blog section -->
-    <section class="container mx-auto">
-        <p class="font-extrabold text-3xl mb-6">Important FAQ !!</p>
-        <div>
+    <section class="min-h-[calc(100vh-360px)]">
+        <div class="container mx-auto ">
+            <p class="font-extrabold text-3xl mb-6">Important FAQ !!</p>
+            <div>
 
-             <!-- faq 1 -->
-            <div class="collapse collapse-arrow bg-base-200 border mb-5">
-                <input type="radio" name="my-accordion-2" checked="checked" />
-                <div class="collapse-title text-xl font-medium">What is the DOM?</div>
-                <div class="collapse-content">
-                    <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents.</p>
+                <!-- faq 1 -->
+                <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the DOM?</div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- faq 2 -->
-            <div class="collapse collapse-arrow bg-base-200 border mb-5">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How does the DOM differ from the actual web page?</div>
-                <div class="collapse-content">
-                    <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.</p>
+                <!-- faq 2 -->
+                <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How does the DOM differ from the actual web page?
+                    </div>
+                    <div class="collapse-content">
+                        <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- faq 3 -->
-            <div class="collapse collapse-arrow bg-base-200 border mb-5">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">How do you manipulate the DOM using JavaScript?</div>
-                <div class="collapse-content">
-                    <p>JavaScript manipulates the DOM by selecting elements and changing their properties or contents.</p>
+                <!-- faq 3 -->
+                <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate the DOM using JavaScript?
+                    </div>
+                    <div class="collapse-content">
+                        <p>JavaScript manipulates the DOM by selecting elements and changing their properties or
+                            contents.</p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- faq 4 -->
-            <div class="collapse collapse-arrow bg-base-200 border mb-5">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">What is the difference between the actual web page and the DOM?</div>
-                <div class="collapse-content">
-                    <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.</p>
+                <!-- faq 4 -->
+                <div class="collapse collapse-arrow bg-base-200 border mb-5">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">What is the difference between the actual web page
+                        and the DOM?</div>
+                    <div class="collapse-content">
+                        <p>The actual web page (static HTML) and the DOM (dynamic representation) are distinct entities.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- faq 5 -->
-            <div class="collapse collapse-arrow bg-base-200 border">
-                <input type="radio" name="my-accordion-2" />
-                <div class="collapse-title text-xl font-medium">Is DOM manipulation bad?</div>
-                <div class="collapse-content">
-                    <p>When manipulating DOM elements, interactions often involve classes and IDs. The risk arises that ServiceNow may alter these names in a future update, potentially causing the script to no longer function as anticipated.</p>
+                <!-- faq 5 -->
+                <div class="collapse collapse-arrow bg-base-200 border">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">Is DOM manipulation bad?</div>
+                    <div class="collapse-content">
+                        <p>When manipulating DOM elements, interactions often involve classes and IDs. The risk arises
+                            that ServiceNow may alter these names in a future update, potentially causing the script to
+                            no longer function as anticipated.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,8 +126,8 @@
     <footer class="mt-20  bg-[#F9F7F3] h-36"></footer>
 
     <script>
-        document.getElementById('go-home-page').addEventListener('click',function(){
-            window. location .href = "./index.html"
+        document.getElementById('go-home-page').addEventListener('click', function (event) {
+            window.location.href = "./index.html"
         })
     </script>
 </body>
